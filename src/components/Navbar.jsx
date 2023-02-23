@@ -160,7 +160,7 @@ ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.
 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_r
 (59,113,202,0.2)]"
                     >
-                      Bileşen Ekle
+                      Tişörtlerimiz
                     </button>
                   </div>
                 </li>
@@ -223,12 +223,21 @@ active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_1
                 data-te-sidenav-collapse-ref
               >
                 <li className="relative">
-                  <a
-                    className="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-slate-50 hover:text-inherit hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-50 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
-                    data-te-sidenav-link-ref
-                  >
-                    Link 7
-                  </a>
+                  <div className="flex justify-center space-x-2">
+                    <button
+                      type="button"
+                      onClick={() => navigate("/carusel")}
+                      className="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase
+leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 
+ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),
+0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rg
+(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 
+active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_r
+(59,113,202,0.2)]"
+                    >
+                      Çok Satan Çeşitlerimiz
+                    </button>
+                  </div>
                 </li>
                 <li className="relative">
                   <a

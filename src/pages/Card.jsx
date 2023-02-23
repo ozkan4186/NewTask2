@@ -3,8 +3,8 @@ import Data from '../helpers/data1.js'
 
 const Card = () => {
   return (
-    <div className="flex align-middle justify-center gap-2">
-      <div className="flex justify-center  align-middle  ">
+    <div className="grid grid-rows-4 grid-flow-col gap-8 mt-11 ">
+      <div className="grid grid-rows-3 grid-flow-col gap-8 w-96  mx-auto ">
         {Data.map((item) => {
           return (
             <div>

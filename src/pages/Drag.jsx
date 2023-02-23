@@ -2,8 +2,8 @@ import React from 'react'
 
 const Drag = () => {
   return (
-    <div>
-      <div className="max-w-xl">
+    <div className='text-center mx-auto mt-9 max-w-md ' >
+      <div className="max-w-sm text-center mx-auto ">
         <label className="flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
           <span className="flex items-center space-x-2">
             <svg

@@ -4,9 +4,35 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="text-5xl ">
+    <div className="text-5xl space-y-7 ">
       <section className="relative text-5xl f flex h-[100px] min-h-20 items-start justify-center overflow-y-hidden border bg-gray-50 light:border-zinc-900 light:bg-zinc-700">
         {/* Sidenav */}
+
+        {/* Required font awesome */}
+        <div className="flex justify-center space-x-4   my-10 mx-2 ">
+          <div>
+            <button
+              type="button"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className="flex items-center rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="mr-1 h-4 w-4"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M19.5 21a3 3 0 003-3V9a3 3 0 00-3-3h-5.379a.75.75 0 01-.53-.22L11.47 3.66A2.25 2.25 0 009.879 3H4.5a3 3 0 00-3 3v12a3 3 0 003 3h15zm-6.75-10.5a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V10.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Otomotik Kaydet
+            </button>
+          </div>
+        </div>
         <nav
           id="sidenav-6"
           className="fixed top-0 left-0 z-[1035] h-screen w-60 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-zinc-800"
@@ -14,6 +40,7 @@ const Navbar = () => {
           data-te-sidenav-hidden="false"
           data-te-sidenav-accordion="true"
         >
+          
           <ul
             className="relative m-0 list-none px-[0.2rem]"
             data-te-sidenav-menu-ref
@@ -61,7 +88,8 @@ const Navbar = () => {
                     />
                   </svg>
                 </span>
-                <span>Bileşen Ekle ve Çikar </span>
+
+                <span>Bileşen Ekle </span>
                 <span
                   className="absolute right-0 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
                   data-te-sidenav-rotate-icon-ref
@@ -89,7 +117,7 @@ const Navbar = () => {
                     <button
                       type="button"
                       onClick={() => navigate("/drag")}
-                      className="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                      className=" mt-3 inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                     >
                       Bileşen Ekle
                     </button>
@@ -152,7 +180,7 @@ const Navbar = () => {
                     <button
                       type="button"
                       onClick={() => navigate("/card")}
-                      className="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase
+                      className=" mt-3 inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase
 leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 
 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),
 0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rg
@@ -227,7 +255,7 @@ active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_1
                     <button
                       type="button"
                       onClick={() => navigate("/carusel")}
-                      className="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase
+                      className=" mt-3 inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase
    leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 
    ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),
    0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rg

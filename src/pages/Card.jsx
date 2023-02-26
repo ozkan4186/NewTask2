@@ -1,21 +1,28 @@
 
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Data from "../helpers/data1.js";
+import { DeleteUser } from "../utils/function.js";
 
 
 
-const Card = () => {
+const Card = ({ editUser, info, setInfo, handleSubmit }) => {
+
+
   const [characters, updateCharacters] = useState(Data);
   function handleOnDragEnd(result) {
-     if (!result.destination) return;
+    if (!result.destination) return;
     const items = Array.from(characters);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
     updateCharacters(items);
-
   }
+  
+  
+  
+
   return (
     <div className=" flex flex-wrap mt-10 gap-10  ">
       <DragDropContext onDragEnd={handleOnDragEnd}>
@@ -26,7 +33,7 @@ const Card = () => {
               {...provided.droppableProps}
               ref={provided.innerRef}
               style={{
-                maxWidth:"1200px"
+                maxWidth: "1200px",
               }}
             >
               {characters.map((item, key, id, index) => {
@@ -54,7 +61,7 @@ const Card = () => {
                             <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
                               {item.price}
                             </p>
-                            <div className=" " >
+                            <div className=" ">
                               <button
                                 type="button"
                                 className="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase 
@@ -76,6 +83,7 @@ hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18p
                                   height="32"
                                   viewBox="0 0 2048 2048"
                                   className="mr-3 -mt-8 "
+                                 
                                 >
                                   <path
                                     fill="#89ca10"
@@ -95,6 +103,7 @@ hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18p
                                   height="32"
                                   viewBox="0 0 16 16"
                                   className="-mt-8"
+                                  onClick={() => DeleteUser(item.id)}
                                 >
                                   <path
                                     fill="#c50a0a"

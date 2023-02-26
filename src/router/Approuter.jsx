@@ -6,17 +6,17 @@ import Carusel from '../pages/Carusel';
 import Drag from '../pages/Drag';
 
 
-const Approuter = () => {
+const Approuter = ({ editUser, info, setInfo, handleSubmit }) => {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path="/drag" element={<Drag/>} />
-        <Route path="/card" element={<Card/>} />
-        <Route path="/carusel" element={<Carusel/>} />
+        <Route path="/drag" element={<Drag />} />
+        <Route path="/card" element={<Card/> } />
+        <Route path="/carusel" element={<Carusel />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default Approuter
